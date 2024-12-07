@@ -27,5 +27,10 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "node_modules/vitest/global.d.ts", "vite.config.ts"]
+  "include": [
+    "src",
+    "node_modules/vitest/global.d.ts",
+    "vite.config.ts",
+    "vitest-setup.ts"
+  ]
 }
