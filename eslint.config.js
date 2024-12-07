@@ -15,6 +15,11 @@ export default tseslint.config(
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     plugins: {
       react: reactPlugin,
       "react-hooks": reactHooksPlugin,
@@ -22,6 +27,7 @@ export default tseslint.config(
     },
     rules: {
       ...reactPlugin.configs.recommended.rules,
+      ...reactPlugin.configs["jsx-runtime"].rules,
       ...reactHooksPlugin.configs.recommended.rules,
       "object-shorthand": "error",
       "react/prop-types": "off",
