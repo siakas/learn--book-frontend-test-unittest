@@ -1,4 +1,5 @@
 import { timeout, wait } from "@/03/07";
+import { describe, expect, test } from "vitest";
 
 describe("非同期処理", () => {
   describe("wait", () => {

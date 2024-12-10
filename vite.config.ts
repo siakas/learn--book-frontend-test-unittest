@@ -8,7 +8,7 @@ import { coverageConfigDefaults } from "vitest/config";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
-    globals: true,
+    // globals: true, // テストファイル内でグローバル変数を使えるようにする
     environment: "happy-dom",
     setupFiles: ["./vitest-setup.ts"],
 

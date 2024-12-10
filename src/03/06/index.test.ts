@@ -1,3 +1,5 @@
+import { describe, expect, test } from "vitest";
+
 describe("真偽値の検証", () => {
   test("「真」の値の検証", () => {
     expect(1).toBeTruthy();
