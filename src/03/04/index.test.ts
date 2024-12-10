@@ -1,5 +1,5 @@
-import { add, sub } from "@/03/04";
 import { describe, expect, test } from "vitest";
+import { add, sub } from "@/03/04";
 
 // 条件分岐のある関数のテスト
 describe("四則演算", () => {

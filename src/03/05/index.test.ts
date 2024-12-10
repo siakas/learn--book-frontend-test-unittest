@@ -1,5 +1,5 @@
-import { add, RangeError, sub } from "@/03/05";
 import { describe, expect, test } from "vitest";
+import { add, RangeError, sub } from "@/03/05";
 
 // 閾値と例外処理のテスト
 describe("四則演算", () => {
