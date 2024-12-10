@@ -80,3 +80,52 @@ describe("文字列の検証", () => {
     });
   });
 });
+
+describe("配列の検証", () => {
+  describe("プリミティブ配列", () => {
+    const tags = ["Jest", "Storybook", "Playwright", "React", "Next.js"];
+    test("期待した文字が配列に含まれているか", () => {
+      expect(tags).toContain("Jest");
+      expect(tags).toHaveLength(5);
+    });
+  });
+  describe("オブジェクト配列", () => {
+    const article1 = { author: "taro", title: "Testing Next.js" };
+    const article2 = { author: "jiro", title: "Storybook play function" };
+    const article3 = { author: "hanako", title: "Visual Regression Testing" };
+    const articles = [article1, article2, article3];
+    test("toContainEqual", () => {
+      expect(articles).toContainEqual(article1);
+    });
+    test("arrayContaining", () => {
+      expect(articles).toEqual(expect.arrayContaining([article1, article3]));
+    });
+  });
+});
+
+describe("オブジェクトの検証", () => {
+  const author = { name: "taroyamada", age: 38 };
+  const article = {
+    title: "Testing with Jest",
+    author,
+  };
+  test("toMatchObject", () => {
+    expect(author).toMatchObject({ name: "taroyamada", age: 38 });
+    expect(author).toMatchObject({ name: "taroyamada" });
+    expect(author).not.toMatchObject({ gender: "man" });
+  });
+  test("toHavProperty", () => {
+    expect(author).toHaveProperty("name");
+    expect(author).toHaveProperty("age");
+  });
+  test("objectContaining", () => {
+    expect(article).toEqual({
+      title: "Testing with Jest",
+      author: expect.objectContaining({ name: "taroyamada" }),
+    });
+    expect(article).toEqual({
+      title: "Testing with Jest",
+      author: expect.not.objectContaining({ gender: "man" }),
+    });
+  });
+});
