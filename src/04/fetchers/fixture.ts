@@ -1,4 +1,4 @@
-import { Article, Articles, HttpError } from "@/04/fetchers/type";
+import type { Article, Articles, HttpError } from "@/04/fetchers/type";
 
 export const httpError: HttpError = {
   err: { message: "internal server error" },
