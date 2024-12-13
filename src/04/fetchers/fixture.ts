@@ -4,7 +4,7 @@ export const httpError: HttpError = {
   err: { message: "internal server error" },
 };
 
-export const getMyArticlesData: Articles = {
+export const dummyArticlesData: Articles = {
   articles: [
     {
       id: "howto-testing-with-typescript",
@@ -30,7 +30,7 @@ export const getMyArticlesData: Articles = {
   ],
 };
 
-export const postMyArticleData: Article = {
+export const dummyPostMyArticleData: Article = {
   id: "xxxxxxx-123456",
   createdAt: "2022-07-19T22:38:41.005Z",
   tags: ["testing", "react"],
