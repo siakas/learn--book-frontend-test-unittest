@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { coverageConfigDefaults } from "vitest/config";
 
@@ -8,7 +8,7 @@ import { coverageConfigDefaults } from "vitest/config";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
-    globals: true,
+    // globals: true, // テストファイル内でグローバル変数を使えるようにする
     environment: "happy-dom",
     setupFiles: ["./vitest-setup.ts"],
 

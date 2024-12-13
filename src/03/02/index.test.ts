@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { add, sub } from "@/03/02";
 
 describe("四則演算", () => {
